@@ -4,5 +4,6 @@
 /tmp
 
 /.bundle
+/.rspec
 config/database.yml
 config/secrets.yml
