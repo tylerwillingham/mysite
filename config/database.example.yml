@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+
+development: &dev
+  <<: *default
+  database: REPLACE_ME
+  username: REPLACE_ME
+  password: REPLACE_ME
+
+test:
+  <<: *dev
+  database: REPLACE_ME
+
+production:
+  <<: *default
+  database: <%= ENV['MYSITE_DB_NAME'] %>
+  username: <%= ENV['MYSITE_DB_USER'] %>
+  password: <%= ENV['MYSITE_DB_PASSWORD'] %>
+  host:     <%= ENV['MYSITE_DB_HOST'] %>
