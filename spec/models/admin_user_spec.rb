@@ -25,5 +25,16 @@
 require 'rails_helper'
 
 RSpec.describe AdminUser, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @valid_user = FactoryGirl.build :admin_user
+  end
+
+  context "#email" do
+    it "must be unique" do
+      expect(@valid_user.save).to eq(true)
+      invalid_user = AdminUser.new email: @valid_user.email
+      expect(invalid_user.valid?).to eq(false)
+      expect(invalid_user.errors[:email]).to include('has already been taken')
+    end
+  end
 end

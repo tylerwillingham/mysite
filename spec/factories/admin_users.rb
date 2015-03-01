@@ -22,11 +22,10 @@
 #  index_admin_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 
-class AdminUser < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  validates :email, presence: true, uniqueness: true
+FactoryGirl.define do
+  factory :admin_user do
+    email 'tyler@mycar.works'
+    password '12345password54321'
+    password_confirmation '12345password54321'
+  end
 end
