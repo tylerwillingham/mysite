@@ -14,4 +14,6 @@ class PostTag < ActiveRecord::Base
 
   validates :title, presence: true, uniqueness: true
   validates :slug, presence: true, uniqueness: true
+
+  default_scope { order('title ASC') }
 end

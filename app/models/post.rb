@@ -19,4 +19,6 @@ class Post < ActiveRecord::Base
   validates :slug, presence: true, uniqueness: true
   validates :summary, presence: true
   validates :body, presence: true
+
+  default_scope { order('created_at DESC') }
 end
