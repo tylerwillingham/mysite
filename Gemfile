@@ -10,6 +10,9 @@ gem 'turbolinks'
 
 gem 'jsonapi-resources'
 
+gem 'devise', '~> 3.4.1'
+gem 'activeadmin', github: 'activeadmin' # for Rails 4 support
+
 group :development do
   gem 'capistrano-rails'
 end
