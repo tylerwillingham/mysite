@@ -12,9 +12,13 @@ gem 'jsonapi-resources'
 
 gem 'devise', '~> 3.4.1'
 gem 'activeadmin', github: 'activeadmin' # for Rails 4 support
+gem 'annotate'
 
 group :development do
   gem 'capistrano-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-annotate'
 end
 
 group :development, :test do
