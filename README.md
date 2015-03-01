@@ -1,6 +1,6 @@
-[![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://gemnasium.com/tylerwillingham/mysite)
+[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://codeclimate.com/github/tylerwillingham/mysite) [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://gemnasium.com/tylerwillingham/mysite)
 
-# README
+# Rails back-end for TylerWillingham.com
 
 ## Requirements:  
 - Ruby 2.1.5
