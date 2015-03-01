@@ -1,2 +1,4 @@
-class PostsController < ApplicationController
+require 'jsonapi/resource_controller'
+
+class PostsController < JSONAPI::ResourceController
 end
