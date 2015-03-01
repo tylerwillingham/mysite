@@ -38,8 +38,9 @@ RSpec.describe Post, type: :model do
 
     it "is unique" do
       expect(@valid_post.save).to eq(true)
-      new_post = @valid_post
+      new_post = Post.new(slug: @valid_post.slug)
       expect(new_post.valid?).to eq(false)
+      expect(new_post.errors[:slug]).to include('has already been taken')
     end
   end
 
