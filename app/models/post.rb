@@ -21,4 +21,6 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
 
   default_scope { order('created_at DESC') }
+  scope :published, -> { where(published: true) }
+  scope :unpublished, -> { where(published: false) }
 end
